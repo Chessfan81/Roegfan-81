@@ -3,7 +3,8 @@
 ### About me
 I am a **data scientist**
 
-![Histogram](images/histogram-example-2.png)
+![Computation Graph](images/Computation_Graph.jpg)
+
 
 [Project 1] (https://medium.com/geoai/house-hunting-the-data-scientist-way-b32d93f5a42f?source=user_profile_page---------0-------------a32b52e2b829----------------------
 
