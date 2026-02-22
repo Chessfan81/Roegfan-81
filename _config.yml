@@ -1,5 +1,3 @@
 title: Data Science Portfolio
-
-#Example data science portfolio
 show_downloads: true
-theme: kekyll-theme-minimal
+theme: jekyll-theme-minimal
