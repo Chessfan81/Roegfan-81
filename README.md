@@ -3,8 +3,6 @@
 ### About me
 I am a **data scientist**
 
-[Project 1](https://medium.com/geoai/house-hunting-the-data-scientist-way-b32d93f5a42f?source=user_profile_page---------0-------------a32b52e2b829----------------------)
-
 ## Education
 
 ## Projects
@@ -15,4 +13,5 @@ Exploratory data analysis and modelling of US homicide data to understand patter
 
 -Methods: Data cleaning, Clustering, logistic regression
 
--Output: Jupyter notebook
+-Output:
+[View analysis (HTML)](USA_Murders_1980_2016.html)
