@@ -4,7 +4,7 @@
 I am a **data scientist** with experience across data engineering, analytics, and visualisation, focused on translating analysis into measurable business impact.
 
 ## Education
-BPP University – MSc Data Science (in progress)
+BPP University – BSc Data Science (in progress)
 
 ## Projects
 
