@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///C:/Users/breta/Downloads/index.html -->
+<!-- saved from url=(0063)file:///C:/Users/breta/Chessfan81%20_%20Data%20Storyteller.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -300,6 +300,27 @@
     font-size: 0.85rem;
   }
 
+  /* CHART LINK */
+  .chart-link {
+    display: block;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    color: #58a6ff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0.5rem 0;
+    transition: all 0.2s;
+  }
+
+  .chart-link:hover {
+    border-color: #58a6ff;
+    background: rgba(88,166,255,0.05);
+    text-decoration: none;
+  }
+
   /* QUOTE */
   blockquote {
     border-left: 3px solid #f85149;
@@ -318,11 +339,11 @@
 <nav>
   <div class="brand">Chess<span>fan81</span> | Data Storyteller</div>
   <ul>
-    <li><a href="file:///C:/Users/breta/Downloads/index.html#project">Project</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/index.html#analysis">Analysis</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/index.html#findings">Findings</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/index.html#impact">Impact</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/Summative_Homicides_USA.ipynb">Notebook</a></li>
+    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#project">Project</a></li>
+    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#analysis">Analysis</a></li>
+    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#findings">Findings</a></li>
+    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#impact">Impact</a></li>
+    <li><a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html">Notebook</a></li>
   </ul>
 </nav>
 
@@ -332,8 +353,8 @@
   <h1>Homicide in the USA<br>1980 – 2014</h1>
   <p>A data-driven investigation into one of America's most dramatic social transformations — told through statistics, sociology, and geography.</p>
   <div>
-    <a href="file:///C:/Users/breta/Downloads/index.html#analysis" class="btn btn-primary">Explore the Analysis</a>
-    <a href="file:///C:/Users/breta/Downloads/Summative_Homicides_USA.ipynb" class="btn btn-outline">View Notebook</a>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" class="btn btn-primary">Explore the Analysis</a>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" class="btn btn-outline">View Notebook</a>
   </div>
   <div class="stats">
     <div class="stat-item">
@@ -395,7 +416,7 @@
   </blockquote>
 
   <div class="chart-container">
-    <iframe src="./Chessfan81 _ Data Storyteller_files/homicide_rate_overall.html" title="US Homicide Rate 1980-2014"></iframe>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" target="_blank" class="chart-link">View Interactive Chart — US Homicide Rate 1980–2014 →</a>
     <div class="chart-label">Figure 1 — US Homicide Rate per 100,000 Population (1980–2014) with key event annotations</div>
   </div>
 
@@ -403,7 +424,7 @@
   <p>Four models were tested: ARIMA(1,1,1), ARIMA(0,1,1), Holt's Linear Trend, and Facebook's Prophet. The series was split at 2000 — training on 1980–2000, predicting 2001–2014. Prophet emerged as the clear winner both visually and on RMSE (0.28), closely mirroring the shape of the actual decline.</p>
 
   <div class="chart-container">
-    <iframe src="./Chessfan81 _ Data Storyteller_files/homicide_forecasts.html" title="Model Forecasts Comparison"></iframe>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" target="_blank" class="chart-link">View Interactive Chart — Model Forecasts Comparison →</a>
     <div class="chart-label">Figure 2 — ARIMA, Holt and Prophet forecasts vs actual homicide rate (2001–2014)</div>
   </div>
 
@@ -415,7 +436,7 @@
   </blockquote>
 
   <div class="chart-container">
-    <iframe src="./Chessfan81 _ Data Storyteller_files/homicide_race_comparison.html" title="Race Comparison Chart"></iframe>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" target="_blank" class="chart-link">View Interactive Chart — White vs Black Homicide Rates →</a>
     <div class="chart-label">Figure 3 — White vs Black homicide rates with crack cocaine epidemic and Crime Bill annotations</div>
   </div>
 
@@ -423,7 +444,7 @@
   <p>The animated choropleth below shows how homicide counts shifted state by state from 1980 to 2014. Press play to watch the story unfold. California consistently dominates whilst Southern states remain stubbornly flat relative to their Northern counterparts.</p>
 
   <div class="chart-container">
-    <iframe src="./Chessfan81 _ Data Storyteller_files/homicide_choropleth.html" title="Animated Choropleth"></iframe>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" target="_blank" class="chart-link">View Interactive Animated Map — Homicides by State 1980–2014 →</a>
     <div class="chart-label">Figure 4 — Animated choropleth of US homicide counts by state (1980–2014). Press play.</div>
   </div>
 
@@ -431,7 +452,7 @@
   <p>The bump chart reveals the stability and volatility of state rankings. California holds rank 1 throughout. Illinois shows the most dramatic movement — likely driven by Chicago's distinct crime cycles. Georgia rises from 10th to 5th, challenging the narrative of a uniform national decline.</p>
 
   <div class="chart-container">
-    <iframe src="./Chessfan81 _ Data Storyteller_files/homicide_bump_chart.html" title="State Rankings Bump Chart"></iframe>
+    <a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html" target="_blank" class="chart-link">View Interactive Chart — State Rankings Bump Chart →</a>
     <div class="chart-label">Figure 5 — State homicide rankings 1980–2014 (top 10 states by average count)</div>
   </div>
 </section>
