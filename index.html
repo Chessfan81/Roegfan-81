@@ -1,336 +1,388 @@
 <!DOCTYPE html>
-<!-- saved from url=(0063)file:///C:/Users/breta/Chessfan81%20_%20Data%20Storyteller.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chessfan81 | Data Storyteller</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+}
+a { color: #58a6ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-  body {
-    background-color: #0d1117;
-    color: #e6edf3;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    line-height: 1.7;
-  }
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(13,17,23,0.95);
+  border-bottom: 1px solid #30363d;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+nav .brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  letter-spacing: 0.02em;
+}
+nav .brand span { color: #f85149; }
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+nav ul a {
+  color: #8b949e;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+nav ul a:hover { color: #e6edf3; text-decoration: none; }
 
-  a { color: #58a6ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+/* HERO */
+.hero {
+  padding: 6rem 2rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero .tag {
+  display: inline-block;
+  background: rgba(248,81,73,0.15);
+  color: #f85149;
+  border: 1px solid rgba(248,81,73,0.3);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #e6edf3 0%, #8b949e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: #8b949e;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+.hero .stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #30363d;
+}
+.hero .stat-item .num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f85149;
+}
+.hero .stat-item .label {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-top: 0.25rem;
+}
 
-  /* NAV */
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(13,17,23,0.95);
-    border-bottom: 1px solid #30363d;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-    z-index: 100;
-    backdrop-filter: blur(8px);
-  }
+/* SECTIONS */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-top: 1px solid #30363d;
+}
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f85149;
+  margin-bottom: 0.75rem;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e6edf3;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 0.5rem;
+}
+p { color: #8b949e; margin-bottom: 1rem; }
 
-  nav .brand {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #e6edf3;
-    letter-spacing: 0.02em;
-  }
+/* CARDS */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+.card .card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.badge {
+  display: inline-block;
+  background: rgba(88,166,255,0.1);
+  color: #58a6ff;
+  border: 1px solid rgba(88,166,255,0.3);
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.badge.red {
+  background: rgba(248,81,73,0.1);
+  color: #f85149;
+  border-color: rgba(248,81,73,0.3);
+}
+.badge.green {
+  background: rgba(63,185,80,0.1);
+  color: #3fb950;
+  border-color: rgba(63,185,80,0.3);
+}
+.badge.amber {
+  background: rgba(210,153,34,0.1);
+  color: #d2991f;
+  border-color: rgba(210,153,34,0.3);
+}
 
-  nav .brand span { color: #f85149; }
+/* CHART EMBED */
+.chart-container {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.chart-container iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+.chart-label {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #30363d;
+  font-size: 0.8rem;
+  color: #8b949e;
+  background: #161b22;
+}
 
-  nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
+/* FINDINGS */
+.finding {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #161b22;
+  border-radius: 8px;
+  border-left: 3px solid #f85149;
+}
+.finding .finding-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f85149;
+  min-width: 2rem;
+  line-height: 1;
+}
+.finding p { margin: 0; font-size: 0.95rem; }
 
-  nav ul a {
-    color: #8b949e;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-  }
+/* TOOLS GRID */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.tool-item {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #8b949e;
+}
 
-  nav ul a:hover { color: #e6edf3; text-decoration: none; }
+/* CTA BUTTON */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-primary {
+  background: #f85149;
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover {
+  background: #da3633;
+  text-decoration: none;
+  color: #fff;
+}
+.btn-outline {
+  background: transparent;
+  color: #58a6ff;
+  border: 1px solid #58a6ff;
+  margin-left: 1rem;
+}
+.btn-outline:hover {
+  background: rgba(88,166,255,0.1);
+  text-decoration: none;
+}
 
-  /* HERO */
-  .hero {
-    padding: 6rem 2rem 4rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 0.85rem;
+}
 
-  .hero .tag {
-    display: inline-block;
-    background: rgba(248,81,73,0.15);
-    color: #f85149;
-    border: 1px solid rgba(248,81,73,0.3);
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
+/* CHART LINK */
+.chart-link {
+  display: block;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  color: #58a6ff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0.5rem 0;
+  transition: all 0.2s;
+}
+.chart-link:hover {
+  border-color: #58a6ff;
+  background: rgba(88,166,255,0.05);
+  text-decoration: none;
+}
 
-  .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #e6edf3 0%, #8b949e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+/* QUOTE */
+blockquote {
+  border-left: 3px solid #f85149;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: #161b22;
+  border-radius: 0 8px 8px 0;
+  color: #c9d1d9;
+  font-style: italic;
+}
 
-  .hero p {
-    font-size: 1.15rem;
-    color: #8b949e;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-  }
+/* ABOUT / BRAND SECTION */
+.brand-statement {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 3px solid #f85149;
+}
+.brand-statement p {
+  color: #c9d1d9;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
 
-  .hero .stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 1px solid #30363d;
-  }
+.brand-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.pillar {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.pillar:hover {
+  border-color: #f85149;
+  transform: translateY(-2px);
+}
+.pillar-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+.pillar h3 {
+  font-size: 0.95rem;
+  color: #e6edf3;
+  margin-bottom: 0.4rem;
+}
+.pillar p {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
 
-  .hero .stat-item .num {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #f85149;
-  }
-
-  .hero .stat-item .label {
-    font-size: 0.85rem;
-    color: #8b949e;
-    margin-top: 0.25rem;
-  }
-
-  /* SECTIONS */
-  section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    border-top: 1px solid #30363d;
-  }
-
-  .section-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #f85149;
-    margin-bottom: 0.75rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #e6edf3;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #e6edf3;
-    margin-bottom: 0.5rem;
-  }
-
-  p { color: #8b949e; margin-bottom: 1rem; }
-
-  /* CARDS */
-  .card {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 1.75rem;
-    margin-bottom: 1.5rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .card:hover {
-    border-color: #58a6ff;
-    transform: translateY(-2px);
-  }
-
-  .card .card-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
-
-  .badge {
-    display: inline-block;
-    background: rgba(88,166,255,0.1);
-    color: #58a6ff;
-    border: 1px solid rgba(88,166,255,0.3);
-    padding: 0.2rem 0.7rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .badge.red {
-    background: rgba(248,81,73,0.1);
-    color: #f85149;
-    border-color: rgba(248,81,73,0.3);
-  }
-
-  .badge.green {
-    background: rgba(63,185,80,0.1);
-    color: #3fb950;
-    border-color: rgba(63,185,80,0.3);
-  }
-
-  /* CHART EMBED */
-  .chart-container {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 1.5rem 0;
-  }
-
-  .chart-container iframe {
-    width: 100%;
-    height: 480px;
-    border: none;
-    display: block;
-  }
-
-  .chart-label {
-    padding: 0.75rem 1rem;
-    border-top: 1px solid #30363d;
-    font-size: 0.8rem;
-    color: #8b949e;
-    background: #161b22;
-  }
-
-  /* FINDINGS */
-  .finding {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
-    padding: 1rem;
-    background: #161b22;
-    border-radius: 8px;
-    border-left: 3px solid #f85149;
-  }
-
-  .finding .finding-num {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #f85149;
-    min-width: 2rem;
-    line-height: 1;
-  }
-
-  .finding p { margin: 0; font-size: 0.95rem; }
-
-  /* TOOLS GRID */
-  .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  .tool-item {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 0.75rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #8b949e;
-  }
-
-  /* CTA BUTTON */
-  .btn {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
-
-  .btn-primary {
-    background: #f85149;
-    color: #fff;
-    border: none;
-  }
-
-  .btn-primary:hover {
-    background: #da3633;
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: #58a6ff;
-    border: 1px solid #58a6ff;
-    margin-left: 1rem;
-  }
-
-  .btn-outline:hover {
-    background: rgba(88,166,255,0.1);
-    text-decoration: none;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #30363d;
-    color: #8b949e;
-    font-size: 0.85rem;
-  }
-
-  /* CHART LINK */
-  .chart-link {
-    display: block;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 1.25rem 1.5rem;
-    color: #58a6ff;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    margin: 0.5rem 0;
-    transition: all 0.2s;
-  }
-
-  .chart-link:hover {
-    border-color: #58a6ff;
-    background: rgba(88,166,255,0.05);
-    text-decoration: none;
-  }
-
-  /* QUOTE */
-  blockquote {
-    border-left: 3px solid #f85149;
-    padding: 0.75rem 1.25rem;
-    margin: 1.5rem 0;
-    background: #161b22;
-    border-radius: 0 8px 8px 0;
-    color: #c9d1d9;
-    font-style: italic;
-  }
+.horizon-strip {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.horizon-item {
+  flex: 1;
+  min-width: 180px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+.horizon-item .h-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+.horizon-item .h-label.h1 { color: #3fb950; }
+.horizon-item .h-label.h2 { color: #58a6ff; }
+.horizon-item .h-label.h3 { color: #f85149; }
+.horizon-item p {
+  font-size: 0.82rem;
+  color: #8b949e;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
 </style>
 </head>
 <body>
@@ -339,10 +391,11 @@
 <nav>
   <div class="brand">Chess<span>fan81</span> | Data Storyteller</div>
   <ul>
-    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#project">Project</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#analysis">Analysis</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#findings">Findings</a></li>
-    <li><a href="file:///C:/Users/breta/Downloads/index%20(2).html#impact">Impact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#analysis">Analysis</a></li>
+    <li><a href="#findings">Findings</a></li>
+    <li><a href="#impact">Impact</a></li>
     <li><a href="https://chessfan81.github.io/Roegfan-81/Summative_Homicides_USA.html">Notebook</a></li>
   </ul>
 </nav>
@@ -375,6 +428,63 @@
     </div>
   </div>
 </div>
+
+<!-- ABOUT / PERSONAL BRAND -->
+<section id="about">
+  <div class="section-label">About</div>
+  <h2>The analyst behind the data</h2>
+
+  <div class="brand-statement">
+    <p>I help operational leaders, problem install teams, and heads of department make faster, clearer, and more cost-effective decisions — by turning complex data into stories that drive action. I specialise in uncovering the financial, operational, and volume-based patterns that slow organisations down, and I communicate insights in a way that is clear, visual, and grounded in business impact.</p>
+  </div>
+
+  <p>What sets me apart is the ability to bridge data and people. Technically strong, but also a confident presenter, a clear writer, and someone who can explain ideas in a way that lands with non-technical stakeholders. I work by Tufte's principle: data should illuminate, not overwhelm — and the best analysis is the one that surprises people with what was hiding in plain sight.</p>
+
+  <div class="brand-pillars">
+    <div class="pillar">
+      <div class="pillar-icon">📊</div>
+      <h3>Analyst</h3>
+      <p>Python, SQL, Power BI, ARIMA, Prophet, Plotly. From raw data to insight.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🎤</div>
+      <h3>Communicator</h3>
+      <p>Confident presenter and clear writer. I make complex ideas land with non-technical audiences.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🔍</div>
+      <h3>Storyteller</h3>
+      <p>Tufte-led clarity. I find the story in the data and build the narrative around what matters.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🧭</div>
+      <h3>Strategist</h3>
+      <p>Operationally grounded. I connect analysis to real business decisions and measurable impact.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 2.5rem; margin-bottom: 0.5rem;">Where I'm heading</h3>
+  <p>I'm currently investing in the skills that will define the next generation of data professionals — particularly where data science meets governance, regulation, and responsible AI.</p>
+
+  <div class="horizon-strip">
+    <div class="horizon-item">
+      <div class="h-label h1">Now — Horizon 1</div>
+      <p>Python · SQL · Power BI · Time series modelling · Stakeholder communication · Operational analytics</p>
+    </div>
+    <div class="horizon-item">
+      <div class="h-label h2">Building — Horizon 2</div>
+      <p>Data governance (DAMA/DMBOK) · ML fundamentals · Cloud platforms · LLM integration · Data quality &amp; lineage</p>
+    </div>
+    <div class="horizon-item">
+      <div class="h-label h3">Watching — Horizon 3</div>
+      <p>AI ethics &amp; regulation · Algorithmic accountability · Model risk management · Enterprise data law</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 1.5rem; font-size: 0.9rem; font-style: italic; color: #8b949e;">
+    BSc Data Science (in progress) · BPP University · Professional Practice Module — Personal Branding &amp; Horizon Scanning
+  </p>
+</section>
 
 <!-- PROJECT -->
 <section id="project">
@@ -530,9 +640,9 @@
 <!-- FOOTER -->
 <footer>
   <p>Chessfan81 · BPP University BSc Data Science · Built with Python, Plotly &amp; GitHub Pages</p>
-  <p style="margin-top: 0.5rem;"><a href="https://github.com/Chessfan81/Roegfan-81">View Repository on GitHub</a></p>
+  <p style="margin-top: 0.4rem; color: #6e7681; font-size: 0.8rem;">Currently investing in data governance, AI ethics, and the legal frameworks shaping the future of machine learning.</p>
+  <p style="margin-top: 0.75rem;"><a href="https://github.com/Chessfan81/Roegfan-81">View Repository on GitHub</a></p>
 </footer>
 
-
-
-</body></html>
+</body>
+</html>
